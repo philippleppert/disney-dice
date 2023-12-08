@@ -2,6 +2,7 @@ library(dplyr)
 library(openxlsx)
 library(shiny)
 library(stringr)
+library(fontawesome)
 
 data <- read.xlsx("disney_filme.xlsx")
 
@@ -24,7 +25,7 @@ ui <- fluidPage(
       class = "btn action-button",
       tags$img(
         src = "logo.png", id = "test",
-        height = "300px", style =  "border-radius: 50%;"
+        height = "300px"
         )
       )
     )
