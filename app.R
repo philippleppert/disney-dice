@@ -6,17 +6,31 @@ library(stringr)
 data <- read.xlsx("disney_filme.xlsx")
 
 ui <- fluidPage(
+  includeCSS("www/styles.css"),
   fluidRow(
-    column(6, h1("Disney-Dice")),
-    column(6, img(src='logo.png', align = "right", width = "150"))
-  ),
+    column(
+      12, 
+      tags$p("Disney-Dice", fa("dice", fill = "#006B99"),  style="font-size: 80px;")
+      ), 
+    ),
   br(),
-  sidebarLayout(
-    sidebarPanel( actionButton("button", "Hey Cri-Kee, schmeiß' die Losfee an!")),
-    mainPanel(
-      br(),
-      h4(textOutput("chosen_film"))
+  h4("Drückt den Button und Cri-Kee schmeißt die Losfee an!"),
+  br(),
+  fluidRow(
+    column(
+    12,
+    tags$button(
+      id = "button",
+      class = "btn action-button",
+      tags$img(
+        src = "logo.png", id = "test",
+        height = "300px", style =  "border-radius: 50%;"
+        )
       )
+    )
+  ), 
+  fluidRow(
+    column(12, h3(textOutput("chosen_film")))
   )
 )
 
