@@ -8,6 +8,7 @@ data <- read.xlsx("disney_filme.xlsx")
 
 ui <- fluidPage(
   includeCSS("www/styles.css"),
+  title = "Disney-Dice",
   fluidRow(
     column(
       12, 
