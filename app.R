@@ -11,7 +11,7 @@ ui <- fluidPage(
   fluidRow(
     column(
       12, 
-      tags$p("Disney-Dice", fa("dice", fill = "#006B99"),  style="font-size: 80px;")
+      tags$p("Disney-Dice", fa("dice", fill = "#006B99"),  style="font-size: 50px;")
       ), 
     ),
   br(),
