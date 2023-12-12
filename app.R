@@ -32,7 +32,7 @@ ui <- fluidPage(
     )
   ), 
   fluidRow(
-    column(12, h3(textOutput("chosen_film")))
+    column(3, h3("Ihr schaut heute...")), column(9, h3(textOutput("chosen_film")))
   )
 )
 
@@ -58,7 +58,7 @@ server <- function(input, output, session) {
    
    # output rolled movie
    output$chosen_film <- renderText({
-     str_c("Ihr schaut heute... ",  rolled_movie)
+     rolled_movie
      })
     
   })
